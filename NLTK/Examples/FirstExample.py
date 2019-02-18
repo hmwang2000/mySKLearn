@@ -60,3 +60,16 @@ print(fword)
 voc=fword.most_common(50)#频率最高的50个字符
 fword.plot(50,cumulative=True)#绘出波形图
 print(fword.hapaxes())#低频词
+
+sentence = """At eight o'clock on Thursday morning... Arthur didn't feel very good."""
+tokens = nltk.word_tokenize(sentence)
+print(tokens)
+#['At', 'eight', "o'clock", 'on', 'Thursday', 'morning',
+#  'Arthur', 'did', "n't", 'feel', 'very', 'good', '.']
+
+nltk.help.upenn_tagset('NNP')#输出NNP的含义
+tagged = nltk.pos_tag(tokens)
+nltk.batch_pos_tag([['this', 'is', 'batch', 'tag', 'test'], ['nltk', 'is', 'text', 'analysis', 'tool']])#批量标注
+print(tagged)
+# [('At', 'IN'), ('eight', 'CD'), ("o'clock", 'JJ'), ('on', 'IN'),
+# ('Thursday', 'NNP'), ('morning', 'NN')]
