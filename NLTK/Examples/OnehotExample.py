@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction import DictVectorizer
 
-
 df = pd.DataFrame([['rick','young'],['phil','old']],columns=['name','age-group'])
 print(df)
 print("\n----By using Panda ----\n")
